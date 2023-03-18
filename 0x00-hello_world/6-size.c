@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
  * main - main function
- *
- * Return: o on success 
+ * Return: o on success
  */
+
 int main(void)
 {
 	printf("size of a char: %lu byte(s)", sizeof(char));
@@ -12,5 +12,4 @@ int main(void)
 	printf("size of a long long int: %lu byte(s)", sizeof(long long int));
 	printf("size of a float: %lu  byte(s)", sizeof(float));
 	return (0);
-
 }
