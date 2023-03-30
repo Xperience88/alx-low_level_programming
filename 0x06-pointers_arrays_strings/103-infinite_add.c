@@ -1,7 +1,23 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * main - check the code to add 2 numbers together.
+ * print_string - prints a string to stdout
+ *
+ * @str: the string to print
+ */
+void print_string(char *str)
+{
+	int i = 0;
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
+	}
+	_putchar('\n');
+}
+
+/**
+ * main - check the code for infinite add.
  *
  * Return: Always 0.
  */
@@ -13,46 +29,78 @@ int main(void)
 	char r2[10];
 	char r3[11];
 	char *res;
-
+	
 	res = infinite_add(n, m, r, 100);
 	if (res == 0)
 	{
-		printf("Error\n");
+		print_string("Error");
 	}
 	else
 	{
-		printf("%s + %s = %s\n", n, m, res);
+		print_string(n);
+	       	_putchar(' ');
+		_putchar('+');
+		_putchar(' ');
+		print_string(m);
+		_putchar(' ');
+		_putchar('=');
+		_putchar(' ');
+		print_string(res);
 	}
-	n = "1234567890";
-	m = "1";
-	res = infinite_add(n, m, r2, 10);
-	if (res == 0)
+		n = "1234567890";
+		m = "1";
+		res = infinite_add(n, m, r2, 10);
+		if (res == 0)
 	{
-		printf("Error\n");
+		print_string("Error");
 	}
-	else
+		else
 	{
-		printf("%s + %s = %s\n", n, m, res);
+		print_string(n);
+		_putchar(' ');
+		_putchar('+');
+		_putchar(' ')
+		print_string(m);
+		_putchar(' ');
+		_putchar('=');
+		_putchar(' ');
+		print_string(res);
 	}
-	n = "999999999";
-	m = "1";
-	res = infinite_add(n, m, r2, 10);
-	if (res == 0)
+		n = "999999999";
+		m = "1";
+		res = infinite_add(n, m, r2, 10);
+		if (res == 0)
+		{
+		print_string("Error");
+	}
+		else
 	{
-		printf("Error\n");
+		print_string(n);
+		_putchar(' ');
+		_putchar('+');
+		_putchar(' ');
+		print_string(m);
+		_putchar(' ');
+		_putchar('=');
+		_putchar(' ');
+		print_string(res);
 	}
-	else
+		res = infinite_add(n, m, r3, 11);
+		if (res == 0)
 	{
-		printf("%s + %s = %s\n", n, m, res);
+		print_string("Error");
 	}
-	res = infinite_add(n, m, r3, 11);
-	if (res == 0)
+		else
 	{
-		printf("Error\n");
+		print_string(n);
+		_putchar(' ');
+		_putchar('+');
+		_putchar(' ');
+		print_string(m);
+		_putchar(' ');
+		_putchar('=');
+		_putchar(' ');
+		print_string(res);
 	}
-	else
-	{
-		printf("%s + %s = %s\n", n, m, res);
-	}
-	return (0);
+		return (0);
 }
